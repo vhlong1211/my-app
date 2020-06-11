@@ -1,15 +1,17 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header.js';
+import Loginform from './components/Loginform.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component{
   render(){
     return(
+      
       <div>
-        <ul>
-          <li>Buy food</li>
-          <li>Eat chicken</li>
-        </ul>
+        <Header />
+        <Loginform />
+        
       </div>
     )
   }
