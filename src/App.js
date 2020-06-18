@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component{
   constructor(){
     super();
-    this.myFav=['End Game','The Dark Knight','San','Sab']
+    this.myFav=[{title:'End Game',isComplete:true},{title:'The Dark Knight',isComplete:true},{title:'San',isComplete:false},{title:'Sab',isComplete:false}]
   }
   render(){
     return(
@@ -18,8 +18,8 @@ class App extends React.Component{
         <Header />
         <Loginform />
         <TabMenu />
-        {this.myFav.map((movi)=>
-          <Render title={movi} />
+        {this.myFav.map((movi,index)=>
+          <Render key={index} stt={movi} />
         )}
         
       </div>
