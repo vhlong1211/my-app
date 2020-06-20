@@ -4,6 +4,8 @@ import Header from './components/Header.js';
 import Loginform from './components/Loginform.js'
 import TabMenu from './components/Menu.js'
 import Render from './components/Render.js'
+import ClickState from './components/ClickState.js'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component{
@@ -21,6 +23,7 @@ class App extends React.Component{
         {this.myFav.map((movi,index)=>
           <Render key={index} stt={movi} />
         )}
+        <ClickState />
         
       </div>
     )
